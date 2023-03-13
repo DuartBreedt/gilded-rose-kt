@@ -4,6 +4,17 @@ class GildedRose(var items: Array<Item>) {
 
     fun updateQuality() {
         for (i in items.indices) {
+            when(items[i]) {
+                is AgedBrieItem -> {}
+
+                is BackstageItem -> {}
+
+                is SulfurasItem -> {}
+
+                is ConjuredItem -> {}
+
+                else -> {}
+            }
 
             if (items[i] !is AgedBrieItem && items[i] !is BackstageItem && items[i] !is SulfurasItem) {
                 if (items[i].quality > 0) {
