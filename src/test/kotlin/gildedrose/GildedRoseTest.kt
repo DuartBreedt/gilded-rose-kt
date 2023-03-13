@@ -7,7 +7,7 @@ class GildedRoseTest {
 
     @Test
     fun basicTest() {
-        val items = arrayOf<Item>(Item("foo", 2, 4))
+        val items = arrayOf<Item>(BasicItem("foo", 2, 4))
 
         val app = GildedRose(items)
 
@@ -29,6 +29,33 @@ class GildedRoseTest {
         app.updateQuality()
 
         assertEquals(-2, app.items[0].sellIn)
+        assertEquals(0, app.items[0].quality)
+    }
+
+    @Test
+    fun basicOddTest() {
+        val items = arrayOf<Item>(BasicItem("foo", 3, 4))
+
+        val app = GildedRose(items)
+
+        app.updateQuality()
+
+        assertEquals(2, app.items[0].sellIn)
+        assertEquals(3, app.items[0].quality)
+
+        app.updateQuality()
+
+        assertEquals(1, app.items[0].sellIn)
+        assertEquals(2, app.items[0].quality)
+
+        app.updateQuality()
+
+        assertEquals(0, app.items[0].sellIn)
+        assertEquals(1, app.items[0].quality)
+
+        app.updateQuality()
+
+        assertEquals(-1, app.items[0].sellIn)
         assertEquals(0, app.items[0].quality)
     }
 

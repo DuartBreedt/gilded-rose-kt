@@ -5,9 +5,9 @@ fun main(args: Array<String>) {
     println("OMGHAI!")
 
     val items = arrayOf(
-        Item("+5 Dexterity Vest", 10, 20), //
+        BasicItem("+5 Dexterity Vest", 10, 20), //
         AgedBrieItem("Aged Brie", 2, 0), //
-        Item("Elixir of the Mongoose", 5, 7), //
+        BasicItem("Elixir of the Mongoose", 5, 7), //
         SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80), //
         SulfurasItem("Sulfuras, Hand of Ragnaros", -1, 80),
         BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
