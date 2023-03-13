@@ -7,7 +7,7 @@ class GildedRoseTest {
 
     @Test
     fun basicTest() {
-        val items = arrayOf(Item("foo", 2, 4))
+        val items = arrayOf<Item>(Item("foo", 2, 4))
 
         val app = GildedRose(items)
 
@@ -34,7 +34,7 @@ class GildedRoseTest {
 
     @Test
     fun agedBrie() {
-        val items = arrayOf(Item("Aged Brie", 2, 45))
+        val items = arrayOf<Item>(AgedBrieItem("Aged Brie", 2, 45))
 
         val app = GildedRose(items)
 
@@ -62,7 +62,7 @@ class GildedRoseTest {
     @Test
     fun sulfuras() {
         // FIXME: BUG! Shouldn't be an exact match
-        val items = arrayOf(Item("Sulfuras, Hand of Ragnaros", 2, 80))
+        val items = arrayOf<Item>(SulfurasItem("Sulfuras, Hand of Ragnaros", 2, 80))
 
         val app = GildedRose(items)
 
@@ -79,7 +79,7 @@ class GildedRoseTest {
 
     @Test
     fun backstage_passes() {
-        val items = arrayOf(Item("Backstage passes to a TAFKAL80ETC concert", 11, 30))
+        val items = arrayOf<Item>(BackstageItem("Backstage passes to a TAFKAL80ETC concert", 11, 30))
 
         val app = GildedRose(items)
 
