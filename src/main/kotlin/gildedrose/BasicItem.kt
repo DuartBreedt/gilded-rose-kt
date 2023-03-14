@@ -2,6 +2,6 @@ package gildedrose
 
 class BasicItem(name: String, sellIn: Int, quality: Int) : UpdatableItem(name, sellIn, quality) {
 
-    override fun getNewQuality(): Int =
-        if (sellIn <= 0) quality - 2 else quality - 1
+    override val dailyQualityModifier: Int
+        get() = if (sellIn <= 0) -2 else -1
 }
